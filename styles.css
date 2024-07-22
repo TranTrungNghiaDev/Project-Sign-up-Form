@@ -2,6 +2,7 @@
     --white: #fff;
     --background-color-logo: rgba(0, 0, 0, 0.5);
     --dark-green: #596D48;
+    --light-grey: rgb(223, 223, 223);
 }
 
 @font-face {
@@ -54,14 +55,17 @@ body {
     justify-content: center;
 }
 
-.main-container div {
+.main-container {
+    background-color: var(--light-grey);
+}
+
+.main-container > div {
     padding: 20px 40px;
 }
 
 /* Introduce */
 #introduce-container {
     font-weight: 700;
-    width: 80%;
 }
 
 #introduce-container p {
@@ -69,28 +73,44 @@ body {
 }
 
 /* Form */
-#form-container {
-    border-bottom: 1px solid;
-    box-shadow: 0 5px 8px #888888;
-}
-
-form {
+#form-info {
     display: flex;
     flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
 }
 
-form > div {
-    min-width: 30%;
+h2 {
+    width: 80%;
+}
+
+input {
+    border-color: #E5E7EB;
+}
+
+#form-container {
+    background-color: var(--white);
+}
+
+#form-info > div {
+    min-width: 40%;
 }
 
 form label {
     display: block;
     font-size: 0.8rem;
+    margin-bottom: 5px;
+}
+
+.shadow-div {
+    border-bottom: 1px solid;
+    box-shadow: 0 5px 8px #888888;
 }
 
 /* Login container */
 #login-container {
     padding-top: 40px;
+    width: 100%;
 }
 
 button {
@@ -103,4 +123,14 @@ button {
 #login-container a {
     color: var(--dark-green);
     text-decoration: none;
+}
+
+/* Validation */
+input[type="password"]:invalid {
+    border-color: red;
+}
+
+input:focus {
+    outline: none;
+    border-color: blue;
 }
