@@ -3,6 +3,7 @@
     --background-color-logo: rgba(0, 0, 0, 0.5);
     --dark-green: #596D48;
     --light-grey: rgb(223, 223, 223);
+    font-size: 1.2rem;
 }
 
 @font-face {
@@ -12,7 +13,6 @@
 
 * {
     box-sizing: border-box;
-    font-size: 22px;
 }
 
 body {
