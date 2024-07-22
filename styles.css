@@ -1,8 +1,17 @@
+:root {
+    --white: #fff;
+    --background-color-logo: rgba(0, 0, 0, 0.5);
+    --dark-green: #596D48;
+}
+
+@font-face {
+    font-family: "Odin";
+    src: url(./fonts/Norse-Bold.otf)format("opentype");
+}
+
 * {
     box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    font-size: 18px;
+    font-size: 22px;
 }
 
 body {
@@ -10,7 +19,88 @@ body {
     height: 100vh;
 }
 
+/* Logo */
 .logo-container {
     background-image: url(./imgs/photo-1585202900225-6d3ac20a6962.avif);
     background-repeat: no-repeat;
+    background-size: cover;
+    min-width: 25%;
+}
+
+.logo-container > div {
+    width: 100%;
+    background-color: var(--background-color-logo);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--white);
+    margin-top: 150px;
+    padding: 5px 0;
+}
+
+.logo-container p {
+    font-family: Odin, sans-serif;
+    font-size: 3rem;
+    margin: 0;
+}
+
+#logo-img {
+    height: 4rem;
+}
+
+.main-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.main-container div {
+    padding: 20px 40px;
+}
+
+/* Introduce */
+#introduce-container {
+    font-weight: 700;
+    width: 80%;
+}
+
+#introduce-container p {
+    margin: 30px 0;
+}
+
+/* Form */
+#form-container {
+    border-bottom: 1px solid;
+    box-shadow: 0 5px 8px #888888;
+}
+
+form {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+form > div {
+    min-width: 30%;
+}
+
+form label {
+    display: block;
+    font-size: 0.8rem;
+}
+
+/* Login container */
+#login-container {
+    padding-top: 40px;
+}
+
+button {
+    background-color: var(--dark-green);
+    color: var(--white);
+    padding: 10px 40px;
+    border-radius: 10px;
+}
+
+#login-container a {
+    color: var(--dark-green);
+    text-decoration: none;
 }
